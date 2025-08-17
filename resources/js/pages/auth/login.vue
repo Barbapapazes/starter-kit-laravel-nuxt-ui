@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from '@nuxt/ui'
 import login from '@/routes/login'
+import { register } from '@/routes'
 import password from '@/routes/password'
+import auth from '@/routes/auth'
 
 const form = useForm({
   email: '',
@@ -30,11 +32,11 @@ const fields = computed(() => [{
 const providers = [{
   label: 'Google',
   icon: 'i-simple-icons:google',
-  to: login.provider.redirect.get({ provider: 'google' })
+  to: auth.provider.redirect.get({ provider: 'google' })
 }, {
   label: 'GitHub',
   icon: 'i-simple-icons:github',
-  to: login.provider.redirect.get({ provider: 'github' })
+  to: auth.provider.redirect.get({ provider: 'github' })
 }]
 
 function onSubmit({ data }: FormSubmitEvent<typeof form>) {
