@@ -1,0 +1,319 @@
+<script lang="ts" setup>
+const LazyStarsBg = defineAsyncComponent(() => import('@/components/StarsBg.vue'))
+
+const page = {
+  title: 'Nuxt UI x Laravel',
+  description: 'Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes. It includes all primitives to build landing pages, documentations, blogs, dashboards or entire SaaS products.',
+  hero: {
+    links: [
+      {
+        label: 'Get started',
+        icon: 'i-lucide:arrow-right',
+        trailing: true,
+        to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
+        target: '_blank',
+        size: 'xl',
+      },
+      {
+        label: 'Use this template',
+        icon: 'i-simple-icons:github',
+        size: 'xl',
+        color: 'neutral',
+        variant: 'subtle',
+        to: 'https://github.com/nuxt-ui-pro/saas',
+        target: '_blank',
+      },
+    ],
+  },
+  sections: [
+    {
+      title: 'Enterprise-Grade Solutions',
+      description: 'Transform your business with our comprehensive suite of tools. Built for scale, security, and seamless integration, our platform empowers teams to achieve more while maintaining complete control.',
+      id: 'features',
+      orientation: 'horizontal',
+      features: [
+        {
+          name: 'Developer-First',
+          description: 'Built by developers for developers, with extensive API documentation and flexible integration options.',
+          icon: 'i-lucide-cog',
+        },
+        {
+          name: '99.9% Uptime',
+          description: 'Enterprise-grade infrastructure with guaranteed reliability and automatic failover protection.',
+          icon: 'i-lucide-check',
+        },
+        {
+          name: 'Bank-Level Security',
+          description: 'SOC 2 Type II certified with end-to-end encryption and advanced threat detection.',
+          icon: 'i-lucide-lock',
+        },
+      ],
+    },
+    {
+      title: 'Optimized for Growth',
+      description: 'Scale your business confidently with our enterprise-ready platform. From startups to Fortune 500 companies, we provide the tools and support you need to succeed.',
+      orientation: 'horizontal',
+      reverse: true,
+      features: [
+        {
+          name: 'Lightning Fast',
+          description: 'Global CDN with sub-100ms latency and automatic performance optimization.',
+          icon: 'i-lucide-rocket',
+        },
+        {
+          name: 'Predictable Pricing',
+          description: 'Transparent, usage-based pricing with no hidden fees and volume discounts.',
+          icon: 'i-lucide-circle-dollar-sign',
+        },
+        {
+          name: 'Infinite Scale',
+          description: 'Auto-scaling architecture handles millions of requests without breaking a sweat.',
+          icon: 'i-lucide-chart-bar',
+        },
+      ],
+    },
+  ],
+  features: {
+    title: 'Features That Set Us Apart',
+    description: 'Our platform combines enterprise-grade reliability with developer-friendly features, providing everything you need to build and scale your applications.',
+    items: [
+      {
+        title: 'Developer Experience',
+        description: 'Comprehensive documentation, powerful CLI tools, and intuitive APIs that make development a joy.',
+        icon: 'i-lucide-cog',
+      },
+      {
+        title: 'Enterprise Ready',
+        description: 'SOC 2 Type II certified, GDPR compliant, with 24/7 enterprise support and dedicated success managers.',
+        icon: 'i-lucide-check',
+      },
+      {
+        title: 'Advanced Security',
+        description: 'Multi-factor authentication, role-based access control, and audit logs keep your data protected.',
+        icon: 'i-lucide-lock',
+      },
+      {
+        title: 'Global Performance',
+        description: 'Edge computing network spans 200+ locations ensuring lightning-fast response times worldwide.',
+        icon: 'i-lucide-rocket',
+      },
+      {
+        title: 'Flexible Pricing',
+        description: 'Pay only for what you use with transparent pricing and no long-term commitments required.',
+        icon: 'i-lucide-circle-dollar-sign',
+      },
+      {
+        title: 'Infinite Scalability',
+        description: 'Built on cloud-native architecture that automatically scales to meet any demand.',
+        icon: 'i-lucide-chart-bar',
+      },
+    ],
+  },
+  testimonials: {
+    headline: 'Customer Success Stories',
+    title: 'Trusted by Industry Leaders',
+    description: 'Join thousands of companies worldwide who have transformed their digital presence with our platform.',
+    items: [
+      {
+        quote: 'The developer experience is unmatched. We migrated our entire infrastructure in weeks instead of months, and our team\'s productivity has increased dramatically. The TypeScript support and component library saved us months of development time.',
+        user: {
+          name: 'Sarah Chen',
+          description: 'CTO at TechScale Solutions',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=1',
+          },
+        },
+      },
+      {
+        quote: 'After implementing the edge computing features, our global application response times dropped by 70%. Our European and Asian markets saw immediate improvements in user engagement and conversion rates.',
+        user: {
+          name: 'Marcus Rodriguez',
+          description: 'VP of Engineering at DataFlow',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=7',
+          },
+        },
+      },
+      {
+        quote: 'The platform\'s security features gave us peace of mind during our SOC 2 certification. The built-in compliance tools and audit logs made the process seamless.',
+        user: {
+          name: 'David Kumar',
+          description: 'Security Director at SecureStack',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=3',
+          },
+        },
+      },
+      {
+        quote: 'During our Black Friday sale, we handled 15x our normal traffic without a hitch. The auto-scaling features worked flawlessly, and our monitoring dashboard gave us real-time insights throughout the event.',
+        user: {
+          name: 'Emily Zhang',
+          description: 'Lead Architect at ScaleForce',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=5',
+          },
+        },
+      },
+      {
+        quote: 'The support team goes above and beyond. They helped us optimize our CI/CD pipeline and suggested performance improvements that reduced our build times by 45%.',
+        user: {
+          name: 'James Wilson',
+          description: 'DevOps Lead at CloudPro',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=8',
+          },
+        },
+      },
+      {
+        quote: 'Switching to this platform reduced our infrastructure costs by 40% while improving performance. The cost savings alone paid for the investment within the first quarter.',
+        user: {
+          name: 'Lisa Patel',
+          description: 'CEO at AutoScale',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=9',
+          },
+        },
+      },
+      {
+        quote: 'The accessibility features and responsive components helped us achieve WCAG 2.1 compliance with minimal custom development. Our site now scores 100 on Lighthouse accessibility metrics.',
+        user: {
+          name: 'Michael Torres',
+          description: 'Frontend Lead at AccessFirst',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=11',
+          },
+        },
+      },
+      {
+        quote: 'We serve millions of API requests daily, and the real-time analytics and monitoring tools have been invaluable for optimizing our performance and identifying bottlenecks.',
+        user: {
+          name: 'Rachel Kim',
+          description: 'Performance Engineer at APIHub',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=10',
+          },
+        },
+      },
+      {
+        quote: 'The component library and design system tools helped us maintain consistency across our 20+ micro-frontends. Our development velocity has never been better.',
+        user: {
+          name: 'Thomas Weber',
+          description: 'UI Architecture Lead at DesignScale',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=12',
+          },
+        },
+      },
+      {
+        quote: 'Integration with our existing tools was seamless. The webhooks and API documentation made it easy to automate our workflows and enhance our development pipeline.',
+        user: {
+          name: 'Sophia Martinez',
+          description: 'Integration Specialist at TechFlow',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=14',
+          },
+        },
+      },
+    ],
+  },
+  cta: {
+    title: 'Start with Nuxt UI Pro today!',
+    description: 'Nuxt UI Pro is free in development, but you need a license to use it in production.',
+    links: [
+      {
+        label: 'Buy now',
+        to: 'https://ui.nuxt.com/pro/purchase',
+        target: '_blank',
+        icon: 'i-lucide-shopping-cart',
+      },
+      {
+        label: 'License',
+        to: 'https://ui.nuxt.com/getting-started/license',
+        trailingIcon: 'i-lucide-circle-help',
+        target: '_blank',
+        variant: 'subtle',
+      },
+    ],
+  },
+}
+</script>
+
+<template>
+  <Default :title="page.title">
+    <UPageHero
+      :title="page.title"
+      :description="page.description"
+      :links="page.hero.links"
+    >
+      <template #top>
+        <div class="absolute rounded-full dark:bg-primary blur-[300px] size-60 sm:size-80 transform -translate-x-1/2 left-1/2 -translate-y-80" />
+
+        <LazyStarsBg />
+      </template>
+
+      <PromotionalVideo />
+    </UPageHero>
+
+    <UPageSection
+      v-for="(section, index) in page.sections"
+      :key="index"
+      :title="section.title"
+      :description="section.description"
+      :orientation="section.orientation"
+      :reverse="section.reverse"
+      :features="section.features"
+    >
+      <ImagePlaceholder />
+    </UPageSection>
+
+    <UPageSection
+      :title="page.features.title"
+      :description="page.features.description"
+    >
+      <UPageGrid>
+        <UPageCard
+          v-for="(item, index) in page.features.items"
+          :key="index"
+          v-bind="item"
+          spotlight
+        />
+      </UPageGrid>
+    </UPageSection>
+
+    <UPageSection
+      id="testimonials"
+      :headline="page.testimonials.headline"
+      :title="page.testimonials.title"
+      :description="page.testimonials.description"
+    >
+      <UPageColumns class="xl:columns-4">
+        <UPageCard
+          v-for="(testimonial, index) in page.testimonials.items"
+          :key="index"
+          variant="subtle"
+          :description="testimonial.quote"
+          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
+        >
+          <template #footer>
+            <UUser
+              v-bind="testimonial.user"
+              size="lg"
+            />
+          </template>
+        </UPageCard>
+      </UPageColumns>
+    </UPageSection>
+
+    <USeparator />
+
+    <UPageCTA
+      v-bind="page.cta"
+      variant="naked"
+      class="overflow-hidden"
+    >
+      <div class="absolute rounded-full dark:bg-primary blur-[250px] size-40 sm:size-50 transform -translate-x-1/2 left-1/2 -translate-y-80" />
+
+      <LazyStarsBg />
+    </UPageCTA>
+  </Default>
+</template>
