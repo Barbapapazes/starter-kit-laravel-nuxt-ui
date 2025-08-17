@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->loadAuthRoutes();
+    }
+
+    /**
+     * Load the auth routes.
+     */
+    private function loadAuthRoutes(): void
+    {
+        Route::middleware('web')
+            ->group(base_path('routes/auth.php'));
     }
 }

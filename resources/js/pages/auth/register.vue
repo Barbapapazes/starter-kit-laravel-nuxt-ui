@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from '@nuxt/ui'
-import { login } from '@/routes'
 import register from '@/routes/register'
 
 const form = useForm({
@@ -39,9 +38,11 @@ const fields = computed(() => [{
 const providers = [{
   label: 'Google',
   icon: 'i-simple-icons:google',
+  to: register.provider.redirect.get({ provider: 'google' })
 }, {
   label: 'GitHub',
   icon: 'i-simple-icons:github',
+  to: register.provider.redirect.get({ provider: 'github' })
 }]
 
 function onSubmit({ data }: FormSubmitEvent<typeof form>) {
