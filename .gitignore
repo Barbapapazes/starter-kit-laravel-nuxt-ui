@@ -10,6 +10,7 @@
 /.nova
 /.phpunit.cache
 /.zed
+/.pnpm-store
 /auth.json
 /node_modules
 /public/build
@@ -26,3 +27,4 @@ components.d.ts
 resources/js/routes
 resources/js/actions
 resources/js/wayfinder
+
